@@ -30,9 +30,23 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
 
-  deploy:
+  test:
     runs-on: ubuntu-latest
     needs: build
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+      - run: npm ci
+      - run: echo "Running react test"
+      - run: npm test
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
     steps:
       - name: executing remote ssh
         uses: appleboy/ssh-action@v1.0.0
