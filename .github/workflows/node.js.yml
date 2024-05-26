@@ -44,7 +44,5 @@ jobs:
           script: |
             cd /usr/share/nginx/app
             git pull origin main
-            npm ci --if-not-present
-            pm2 start npm --name app -- run start --if-not-present
-            pm2 save --force
+            npm ci
             pm2 restart app
