@@ -8,7 +8,7 @@ const Home = () => {
           Rasa Autentik Tiap Gigitan
         </h1> */}
         <h1 className="text-[30px] md:text-[40px] lg:text-[50px] font-bold text-white drop-shadow-[0_2.6px_1.9px_rgba(0,0,0,0.9)]">
-          Bandeng Bu Yem Semarang Enak Sekali Rasanya...
+        Nikmati Bandeng Bu Yem Semarang, Sensasi Rasa Tak Terlupakan...
         </h1>
         <p className="text-text text-[14px] lg:text-[18px] text-white drop-shadow-[0_2.6px_1.9px_rgba(0,0,0,0.9)]">
           Dibuat tanpa pengawet dan tanpa pewarna buatan
